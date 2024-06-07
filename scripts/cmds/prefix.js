@@ -12,19 +12,19 @@ module.exports = {
 		category: "config",
 		guide: {
 			vi: "   {pn} <new prefix>: thay đổi prefix mới trong box chat của bạn"
-				+ "\dụ:"
-				+ "\n} #"
-				+ "\n} <new prefix> -g: thay đổi prefix mới trong hệ thống bot (chỉ admin bot)"
-				+ "\dụ:"
-				+ "\n} # -g"
-				+ "\n} reset: thay đổi prefix trong box chat của bạn về mặc định",
+				+ "\ụ:"
+				+ "\} #"
+				+ "\} <new prefix> -g: thay đổi prefix mới trong hệ thống bot (chỉ admin bot)"
+				+ "\ụ:"
+				+ "\} # -g"
+				+ "\} reset: thay đổi prefix trong box chat của bạn về mặc định",
 			en: "   {pn} <new prefix>: change new prefix in your box chat"
-				+ "\mple:"
-				+ "\n} #"
-				+ "\n} <new prefix> -g: change new prefix in system bot (only admin bot)"
-				+ "\mple:"
-				+ "\n} # -g"
-				+ "\n} reset: change prefix in your box chat to default"
+				+ "\ple:"
+				+ "\} #"
+				+ "\} <new prefix> -g: change new prefix in system bot (only admin bot)"
+				+ "\ple:"
+				+ "\} # -g"
+				+ "\} reset: change prefix in your box chat to default"
 		}
 	},
 
@@ -36,7 +36,7 @@ module.exports = {
 			confirmThisThread: "Vui lòng thả cảm xúc bất kỳ vào tin nhắn này để xác nhận thay đổi prefix trong nhóm chat của bạn",
 			successGlobal: "Đã thay đổi prefix hệ thống bot thành: %1",
 			successThisThread: "Đã thay đổi prefix trong nhóm chat của bạn thành: %1",
-			myPrefix: "🌐 Prefix của hệ thống: %1\fix của nhóm bạn: %2"
+			myPrefix: "🌐 Prefix của hệ thống: %1\ix của nhóm bạn: %2"
 		},
 		en: {
 			reset: "Your prefix has been reset to default: %1",
@@ -45,7 +45,7 @@ module.exports = {
 			confirmThisThread: "Please react to this message to confirm change prefix in your box chat",
 			successGlobal: "Changed prefix of system bot to: %1",
 			successThisThread: "Changed prefix in your box chat to: %1",
-			myPrefix: "🍀𝐏𝐑𝐄𝐅𝐈𝐗 𝐒𝐎𝐍𝐈𝐂🍀 : [%1]_________________\ 🔴𝙿𝚁𝙴𝙵𝙸𝚇 𝙰𝚁𝙲𝙰𝙽𝙾🔴  :  {%2}____________________\ 🌿𝐒𝐎𝐍𝐈𝐂✨𝐀𝐑𝐂𝐀𝐍𝐎🌿  _________________\ 𝑀𝑌 𝐶𝑅𝐸𝐴𝑇𝑂𝑅𝑆 ʬɸʬ Shïsûį Dånïęl ʬɸʬ and ʚɸɞ 𝐀𝐫𝐜𝐚𝐧𝐨 𝐌𝐚𝐥𝐢𝐠𝐧𝐮𝐢𝐬 ʚɸɞ\ 𝗧𝗮𝗽𝗲 #𝗵𝗲𝗹𝗽 𝗽𝗼𝘂𝗿 𝗮𝘃𝗼𝗶𝗿 𝗹𝗮 𝗹𝗶𝘀𝘁𝗲 𝗱𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀"
+			myPrefix: "💠 𝑳𝒊𝒎𝒖𝒍𝒆💧𝒑𝒓𝒆𝒇𝒊𝒙💠 : [%1]____________________\n 🔷 𝐂𝐫é𝐚𝐭𝐨𝐫👇👇🔷   {%2}\n____________________\n https://www.facebook.com/profile.php?id=100091833939051\n____________________\n 𝑀𝑌 𝐶𝑅𝐸𝐴𝑇𝑂𝑅  IS 👑 YVAN POWER 👑\𝗧𝗮𝗽𝗲 •𝗵𝗲𝗹𝗽 𝗽𝗼𝘂𝗿 𝗮𝘃𝗼𝗶𝗿 𝗹𝗮 𝗹𝗶𝘀𝘁𝗲 𝗱𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀"
 		}
 	},
 
