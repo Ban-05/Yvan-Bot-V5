@@ -1,15 +1,15 @@
 module.exports = {
   config: {
-    name: "lord",
+    name: "dust",
     aliases: ["lrd"],
     version: "1.0",
-    author: "ʬɸʬ 𝐒𝐡𝐢𝐬𝐮𝐢 𝐗 𝐀𝐫𝐜𝐚𝐧𝐨 ʬɸʬ",
+    author: "Yvan power ",
     countDown: 10,
     role: 0,
     shortDescription: "Amuses toi bien au jeu du hasard",
     longDescription: "Seul le hasard tu rendras riche ou pauvre...Bonne chance",
     category: "game",
-    guide: "{pn} <Suzaku/Zero> <amount of money>"
+    guide: "{pn} <Nind/Van> <amount of money>"
   },
 
   onStart: async function ({ args, message, usersData, event }) {
@@ -18,16 +18,16 @@ module.exports = {
     const user = event.senderID;
     const userData = await usersData.get(event.senderID);
 
-    if (!["suzaku", "zero"].includes(betType)) {
-      return message.reply("❤‍🔥 | 𝗖𝗵𝗼𝗶𝘀𝗶 : '𝘀𝘂𝘇𝗮𝗸𝘂' 𝗼𝘂 '𝘇𝗲𝗿𝗼'.");
+    if (!["nind", "van"].includes(betType)) {
+      return message.reply("💠💧 | 𝗖𝗵𝗼𝗶𝘀𝗶 : '𝐍𝐢𝐧𝐝' 𝗼𝘂 '𝐕𝐚𝐧'.");
     }
 
     if (!Number.isInteger(betAmount) || betAmount < 50) {
-      return message.reply("🌿 | 𝐌𝐢𝐬𝐞 𝐚𝐮 𝐦𝐨𝐢𝐧𝐬 50$ 𝐨𝐮 𝐩𝐥𝐮𝐬.");
+      return message.reply("💠 | 𝐌𝐢𝐬𝐞 𝐚𝐮 𝐦𝐨𝐢𝐧𝐬 50$ 𝐨𝐮 𝐩𝐥𝐮𝐬.");
     }
 
     if (betAmount > userData.money) {
-      return message.reply("💁‍♀ | 𝐕𝐚, 𝐭𝐮 𝐧'𝐚𝐬 𝐩𝐚𝐬 𝐜𝐞𝐭𝐭𝐞 𝐬𝐨𝐦𝐦𝐞 💔");
+      return message.reply("💧 | 𝐕𝐚, 𝐭𝐮 𝐧'𝐚𝐬 𝐩𝐚𝐬 𝐜𝐞𝐭𝐭𝐞 𝐬𝐨𝐦𝐦𝐞 ✴");
     }
 
     const dice = [1, 2, 3, 4, 5, 6];
@@ -49,16 +49,16 @@ module.exports = {
       const winAmount = 2 * betAmount;
       userData.money += winAmount;
       await usersData.set(event.senderID, userData);
-      return message.reply(`🎀✨𝐄𝐔𝐏𝐇𝐄𝐌𝐈𝐀✨🎀
+      return message.reply(`💠✨𝑳𝒊𝒎𝒖𝒍𝒆 𝒕𝒆𝒎𝒑𝒆𝒔𝒕✨💠
  ───────────
-💘[ ${resultString} ]💘\ 💚|𝐁𝐫𝐚𝐯𝐨 𝐩𝐞𝐭𝐢𝐭 𝐜𝐨𝐞𝐮𝐫 𝐭'𝐚𝐬 𝐠𝐚𝐠𝐧𝐞 🎀${winAmount}€🎀!`);
+🔱[ ${resultString} ]🔱\ 🌀|𝐁𝐫𝐚𝐯𝐨 𝐭𝐮 𝐠𝐚𝐠𝐧𝐞🎉💧${winAmount}€💧!`);
     } else {
       userData.money -= betAmount;
       await usersData.set(event.senderID, userData);
-      return message.reply(`𝐄𝐔𝐏𝐇𝐄𝐌𝐈𝐀
+      return message.reply(`𝑳𝒊𝒎𝒖𝒍𝒆 𝒕𝒆𝒎𝒑𝒆𝒔𝒕
   ─────────── 
 ʕ˖͜͡˖ʔ[ ${resultString} ]ʕ˖͜͡˖ʔ
-🥺| 𝐃𝐞𝐬𝐨𝐥𝐞 𝐦𝐨𝐧 𝐜𝐡𝐨𝐮 𝐭'𝐚𝐬 𝐩𝐞𝐫𝐝𝐮 🎀${betAmount}€🎀.`);
+🥺| 𝐃𝐬𝐥 𝐦𝐞𝐜 𝐦𝐚𝐢𝐬 𝐭'𝐚 𝐩𝐞𝐫𝐝𝐮 💧${betAmount}€💧.`);
     }
   }
     }
