@@ -1,15 +1,15 @@
 module.exports = {
   config: {
-    name: "golden",
-    aliases: ["gold"],
+    name: "bulz",
+    aliases: ["bulz"],
     version: "1.0",
     author: "Loid Butter | haitani du toman",
     countDown: 10,
     role: 0,
-    shortDescription: "Play miss, the oldest gambling game",
-    longDescription: "Play miss, the oldest gambling game, and earn money",
+    shortDescription: "Play bluz, the oldest gambling game",
+    longDescription: "Play bluz, the oldest gambling game, and earn money",
     category: "game",
-    guide: "{pn} <state/warrior> <amount of money>"
+    guide: "{pn} <rimuru/limule> <amount of money>"
   },
 
   onStart: async function ({ args, message, usersData, event }) {
@@ -18,16 +18,16 @@ module.exports = {
     const user = event.senderID;
     const userData = await usersData.get(event.senderID);
 
-    if (!["soy", "luna"].includes(betType)) {
-      return message.reply("🔥choisi entre, state | warrior.");
+    if (!["rimuru", "limule"].includes(betType)) {
+      return message.reply("💠𝐂𝐡𝐨𝐢𝐬𝐢 𝐞𝐧𝐭𝐫𝐞 [𝐑𝐈𝐌𝐔𝐑𝐔] 𝐨ù [𝐋𝐈𝐌𝐔𝐋𝐄] .");
     }
 
-    if (!Number.isInteger(betAmount) || betAmount < 500) {
-      return message.reply("⏳𝐋𝐞 𝐦𝐨𝐧𝐭𝐚𝐧𝐭 𝐝𝐨𝐢𝐭 𝐞̂𝐭𝐫𝐞 500 𝐨𝐮 𝐩𝐥𝐮𝐬.");
+    if (!Number.isInteger(betAmount) || betAmount < 100) {
+      return message.reply("💧𝐋𝐞 𝐦𝐨𝐧𝐭𝐚𝐧𝐭 𝐝𝐨𝐢𝐭 𝐞̂𝐭𝐫𝐞 100 𝐨𝐮 𝐩𝐥𝐮𝐬.");
     }
 
     if (betAmount > userData.money) {
-      return message.reply("🤣𝐏𝐚𝐮𝐯𝐫𝐞 𝐪𝐮𝐞 𝐭𝐮 𝐞𝐬, 𝐭𝐮 𝐧'𝐚𝐬 𝐩𝐚𝐬 𝐜𝐞 𝐦𝐨𝐧𝐭𝐚𝐧𝐭 𝐩𝐨𝐮𝐫 𝐣𝐨𝐮𝐞𝐫");
+      return message.reply("😶 𝐭𝐮 𝐧'𝐚𝐬 𝐩𝐚𝐬 𝐜𝐞 𝐦𝐨𝐧𝐭𝐚𝐧𝐭 𝐩𝐨𝐮𝐫 𝐣𝐨𝐮𝐞𝐫👋");
     }
 
     const dice = [1, 2, 3, 4, 5, 6];
@@ -49,11 +49,11 @@ module.exports = {
       const winAmount = 4 * betAmount;
       userData.money += winAmount;
       await usersData.set(event.senderID, userData);
-      return message.reply(`(♥_♥)𝐓𝐮 𝐯𝐢𝐞𝐧𝐬 𝐝𝐞 𝐫𝐞𝐦𝐩𝐨𝐫𝐭𝐞𝐫 𝐥𝐞 𝐠𝐫𝐨𝐬 𝐥𝐨𝐭[ ${resultString} ]\n\n🎉 | Congratulations! You won ${winAmount}!`);
+      return message.reply(`(💠_💠)𝐓𝐮 𝐯𝐢𝐞𝐧𝐬 𝐝𝐞 𝐫𝐞𝐦𝐩𝐨𝐫𝐭𝐞𝐫 𝐥𝐞 𝐠𝐫𝐨𝐬 𝐥𝐨𝐭[ ${resultString} ]\n\n🎉 | Congratulations! You won ${winAmount}!`);
     } else {
       userData.money -= betAmount;
       await usersData.set(event.senderID, userData);
-      return message.reply(`(ू˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ू)𝐓𝐮 𝐚𝐬 𝐩𝐞𝐫𝐝𝐮 𝐭𝐨𝐧 𝐟𝐫𝐢𝐜[ ${resultString} ]\n\n🎯 | You lost ${betAmount}.`);
+      return message.reply(`(ू˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ू)>𝐓𝐮 𝐚𝐬 𝐩𝐞𝐫𝐝𝐮 𝐭𝐨𝐧 𝐟𝐫𝐢𝐜[ ${resultString} ]\n\n🔱 | You lost ${betAmount}.`);
     }
   }
 };
