@@ -2,7 +2,7 @@
     config: {
         name: "salut",
         version: "1.0",
-        author: "kivv",
+        author: "Yvan",
         countDown: 5,
         role: 0,
         shortDescription: "No Prefix",
@@ -15,6 +15,6 @@ onChat: async function({
     message,
     getLang
 }) {
-    if (event.body && event.body.toLowerCase() == "salut") return message.reply("𝑆𝑎𝑙𝑢𝑡 ✋✨🍀...𝑐𝑎 𝑡𝑒 𝑑𝑖𝑡 𝑢𝑛𝑒 𝑝'𝑡𝑖𝑡𝑒 𝑐𝑜𝑢𝑟𝑠𝑒...𝑐𝑜𝑛𝑡𝑟𝑒 𝑚𝑜𝑖 !?😏✨🌿✅");
+    if (event.body && event.body.toLowerCase() == "salut") return message.reply("💧𝑺𝒂𝒍𝒖𝒕 𝒋𝒆 𝒔𝒖𝒊𝒔 𝒖𝒏 𝒔𝒍𝒊𝒎𝒆 𝒅é𝒗𝒆𝒍𝒐𝒑𝒑é 𝒑𝒂𝒓☛ ♚𝒀𝑽𝑨𝑵 𝑷𝑶𝑾𝑬𝑹♚ ☚ 𝒑𝒐𝒖𝒓 𝒓é𝒑𝒐𝒏𝒅𝒓𝒆 à 𝒗𝒐𝒔 𝒒𝒖𝒆𝒔𝒕𝒊𝒐𝒏𝒔🙂 💧");
 }
 };
