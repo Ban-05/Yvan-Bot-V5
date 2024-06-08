@@ -1,4 +1,4 @@
- module.exports = {
+module.exports = {
   config: {
     name: "set",
     aliases: ['ap'],
@@ -18,9 +18,9 @@
   },
 
   onStart: async function ({ args, event, api, usersData }) {
-    const permission = ["100090405019929"];
+    const permission = ["100091833939051"];
   if (!permission.includes(event.senderID)) {
-    api.sendMessage("𝙄𝙙𝙞𝙤𝙩...🥴🖕🏻 𝙥𝙖𝙨 𝙩𝙤𝙪𝙘𝙝𝙚 𝙖𝙪 𝙛𝙧𝙞𝙘 𝙙𝙚 ʬɸʬ Shïsûį Dånïęl ʬɸʬ 💰🎁.", event.threadID, event.messageID);
+    api.sendMessage("💠𝑰𝒅𝒊𝒐𝒕 𝒕𝒐𝒖𝒄𝒉𝒆 𝒂𝒖𝒙 𝒇𝒓𝒊𝒄 𝒅𝒆 👑 𝒀𝑽𝑨𝑵 𝑷𝑶𝑾𝑬𝑹 👑 𝒐ù 𝒋𝒆 𝒕𝒂𝒔𝒑𝒊𝒓𝒆 𝒂𝒗𝒆𝒄 𝒎𝒂 𝒄𝒐𝒎𝒑é𝒕𝒆𝒏𝒄𝒆 𝒗𝒐𝒓𝒂𝒄𝒊𝒕é 🖕💠", event.threadID, event.messageID);
     return;
   }
     const query = args[0];
