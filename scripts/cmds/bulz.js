@@ -22,12 +22,12 @@ module.exports = {
       return message.reply("💠𝐂𝐡𝐨𝐢𝐬𝐢 𝐞𝐧𝐭𝐫𝐞 [𝐑𝐈𝐌𝐔𝐑𝐔] 𝐨ù [𝐋𝐈𝐌𝐔𝐋𝐄] .");
     }
 
-    if (!Number.isInteger(betAmount) || betAmount < 100) {
-      return message.reply("💧𝐋𝐞 𝐦𝐨𝐧𝐭𝐚𝐧𝐭 𝐝𝐨𝐢𝐭 𝐞̂𝐭𝐫𝐞 100 𝐨𝐮 𝐩𝐥𝐮𝐬.");
+    if (!Number.isInteger(betAmount) || betAmount < 50) {
+      return message.reply("💧𝐋𝐞 𝐦𝐨𝐧𝐭𝐚𝐧𝐭 𝐝𝐨𝐢𝐭 𝐞̂𝐭𝐫𝐞 50 𝐨𝐮 𝐩𝐥𝐮𝐬.");
     }
 
     if (betAmount > userData.money) {
-      return message.reply("😶 𝐭𝐮 𝐧'𝐚𝐬 𝐩𝐚𝐬 𝐜𝐞 𝐦𝐨𝐧𝐭𝐚𝐧𝐭 𝐩𝐨𝐮𝐫 𝐣𝐨𝐮𝐞𝐫👋");
+      return message.reply("💠 𝐭𝐮 𝐧'𝐚𝐬 𝐩𝐚𝐬 𝐜𝐞 𝐦𝐨𝐧𝐭𝐚𝐧𝐭 𝐩𝐨𝐮𝐫 𝐣𝐨𝐮𝐞𝐫👋");
     }
 
     const dice = [1, 2, 3, 4, 5, 6];
@@ -49,11 +49,11 @@ module.exports = {
       const winAmount = 4 * betAmount;
       userData.money += winAmount;
       await usersData.set(event.senderID, userData);
-      return message.reply(`(💠_💠)𝐓𝐮 𝐯𝐢𝐞𝐧𝐬 𝐝𝐞 𝐫𝐞𝐦𝐩𝐨𝐫𝐭𝐞𝐫 𝐥𝐞 𝐠𝐫𝐨𝐬 𝐥𝐨𝐭[ ${resultString} ]\n\n🎉 | Congratulations! You won ${winAmount}!`);
+      return message.reply(`(💠_💠)>𝐓𝐮 𝐯𝐢𝐞𝐧𝐬 𝐝𝐞 𝐫𝐞𝐦𝐩𝐨𝐫𝐭𝐞𝐫 𝐥𝐞 𝐠𝐫𝐨𝐬 𝐥𝐨𝐭[ ${resultString} ]\n\n🎉 | 𝐛𝐫𝐚𝐯𝐨 𝐭𝐚 𝐠𝐚𝐠𝐧𝐞 𝐥𝐚 𝐬𝐨𝐦𝐦𝐞 𝐝𝐞 ☛ 💧 ${winAmount}💧€ `);
     } else {
       userData.money -= betAmount;
       await usersData.set(event.senderID, userData);
-      return message.reply(`(ू˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ू)>𝐓𝐮 𝐚𝐬 𝐩𝐞𝐫𝐝𝐮 𝐭𝐨𝐧 𝐟𝐫𝐢𝐜[ ${resultString} ]\n\n🔱 | You lost ${betAmount}.`);
+      return message.reply(`( ⚈̥̥̥̥̥́⌢⚈̥̥̥̥̥̀)>𝐓𝐮 𝐚𝐬 𝐩𝐞𝐫𝐝𝐮 𝐭𝐨𝐧 𝐟𝐫𝐢𝐜 \n                 [ ${resultString} ]\n\n🔱 | 𝐓'𝐚 𝐩𝐞𝐫𝐝𝐮 𝐮𝐧𝐞 𝐬𝐨𝐦𝐦𝐞 𝐝𝐞 ☛${betAmount}.€`);
     }
   }
 };
